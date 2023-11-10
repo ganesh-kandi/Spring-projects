@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configuring DEPENDANT bean -->
+	<bean id="person1" class="in.ineron.model.Employee">
+		<property name="eno" value='10'/>
+		<property name="ename" value='sachin'/>
+		<property name="eadder" value='MI'/>
+	</bean>	
+	
+	<!-- Configuring DEPENDANT bean using Parameter injection -->
+	<bean id="person2" class='in.ineron.model.Employee'>
+		<constructor-arg name='eno' value='7'/>
+		<constructor-arg name='ename' value='dhoni'/>
+		<constructor-arg name='eadder' value='CSK'/>
+	</bean>
+</beans>

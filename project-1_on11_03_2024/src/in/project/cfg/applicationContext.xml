@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "sysDate" class="java.util.Date"/>
+	<bean id = "dobDate" class="java.util.Date">
+		<property name="year" value="93"/>
+		<property name="month" value="0"/>
+		<property name="date" value="03"/>
+	</bean>
+	
+	
+	<!-- Array injection -->
+	<bean id = "marksInfo" class="in.project.model.MarksInfo">
+		<property name="marks">
+			<array>
+				<value>100</value>
+				<value>97</value>
+				<value>99</value>
+			</array>
+		</property>
+		<property name="dates">
+			<array>
+				<ref bean="sysDate"/>
+				<ref bean="dobDate"/>
+			</array>
+		</property>
+	</bean>
+	
+	
+	<!-- List Injection -->
+	<bean id ='college' class='in.project.model.MarksInfo'>
+		<property name="nameList">
+			<list value-type="java.lang.String">
+				<value>sachin</value>
+				<value>saurav</value>
+				<value>rahul</value>
+				<value>kohli</value>
+			</list>
+		</property>
+		<property name="dateList">
+			<list value-type="java.util.Date">
+				<ref bean='sysDate'/>
+				<ref bean='dobDate'/>
+			</list>
+		</property>
+	</bean>
+	
+		
+</beans>

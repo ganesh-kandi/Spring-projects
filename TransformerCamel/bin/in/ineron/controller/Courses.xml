@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+	<course title="java">
+		<students>
+			<student id="123">
+				<firstname>Kandi</firstname>
+				<lastname>Ganesh</lastname>
+				<username>ganesh</username>
+			</student>
+			<student id="654">
+				<firstname>Kandi</firstname>
+				<lastname>Anusha</lastname>
+				<username>Anusha</username>
+			</student>
+		</students>
+
+	</course>
+
+</courses>
